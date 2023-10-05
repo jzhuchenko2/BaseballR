@@ -40,7 +40,7 @@ my_teams %>%
   tail()
 #1a.) 
 Teams %>% filter(yearID >= 1961, yearID <= 2000) %>%
-  mutate(Era = ifelse(yearID <= 1990, "1981-1990", "1991-2000"),
+  mutate(Era = ifelse(yearID <= 1990, "1971-1980" "1981-1990", "1991-2000"),
          WinPct = W / (W + L)) ->
 Eras
 
