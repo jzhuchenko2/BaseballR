@@ -54,3 +54,18 @@ f_fit <- lapply(eras, one_fit)
 names(f_fit) <- eras
 
 sapply(f_fit, coef)
+
+#THE
+merge(x = df1, y = df2, by = "CustomerId", all = TRUE)
+People %>% 
+  inner_join(top_closers) %>% 
+  pull(residuals_pyt) %>% 
+  summary()
+
+stuff_ <- People %>% filter (birthYear > 1950) %>% select(playerID)
+stuff2_ <- Batting %>% filter (V2 > 1950) %>% select(V1)
+stuff3_ <- Pitching %>% filter (yearID > 1950) %>% select(playerID)
+
+
+
+
