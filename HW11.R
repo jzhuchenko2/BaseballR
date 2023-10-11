@@ -66,6 +66,8 @@ stuff_ <- People %>% filter (birthYear > 1950) %>% select(playerID)
 stuff2_ <- Batting %>% filter (V2 > 1950) %>% select(V1)
 stuff3_ <- Pitching %>% filter (yearID > 1950) %>% select(playerID)
 
-
+stuff4_ <- merge(Pitching, Batting, by="playerID")
+stuff4.1_ <- merge(People, mlb_rosters_1_with_playerid, by="playerID")
+stuff5_ <- merge(stuff4.1_, stuff4_, by="playerID")
 
 
