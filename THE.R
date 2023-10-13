@@ -8,3 +8,7 @@ merged_batting$pa <- merged_batting$pa / 100
 merged_batting$ab <- merged_batting$hit - merged_batting$pa
 merged_batting$head(100)
 merged_batting_subset <- merged_batting[order(-merged_batting$ab), ][1:100, ]
+
+final_batting_data <- merged_batting_subset
+
+write.csv(final_batting_data, "final_batting_data.csv", row.names = TRUE)
