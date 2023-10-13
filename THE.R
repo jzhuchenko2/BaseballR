@@ -16,3 +16,11 @@ write.csv(final_batting_data, "final_batting_data.csv", row.names = FALSE)
 ##pitchingsal$Name <- pitchingsal$`Name `
 
 merged_batting <- merge(stats_1_, battingsal, by="Name")
+
+##pitching stats
+
+merged_pitching <- merge(stats_4_, pitchingsal, by="Name")
+
+merged_pitching$out_zone_percent <- merged_pitching$out_zone_percent * 100
+merged_pitching$ac <- merged_pitching$p_era / merged_pitching$out_zone_percent
+merged_pitching$head(100)
