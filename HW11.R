@@ -70,4 +70,14 @@ stuff4_ <- merge(Pitching, Batting, by="playerID")
 stuff4.1_ <- merge(People, mlb_rosters_1_with_playerid, by="playerID")
 stuff5_ <- merge(stuff4.1_, stuff4_, by="playerID")
 
+library(tidyverse)
+library(Lahman)
+library(readr)
+
+
+#Run Expectancy Matrix
+fields <- read_xlsx("fields.xlsx")
+all2016 <- read_csv("all2016.csv",
+
+
 
