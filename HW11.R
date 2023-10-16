@@ -78,6 +78,7 @@ library(readr)
 #Run Expectancy Matrix
 fields <- read_xlsx("fields.xlsx")
 all2016 <- read_csv("all2016.csv",
-
-
+      # pull the specific fields and header
+col_names = pull(fields, Header),
+na = character())
 
