@@ -1,0 +1,32 @@
+#HW17
+#1.) The run value of a single and a home run varies
+#greatly, with a home run producing significantly
+#more runs. When considering the amount of outs,
+#this differential becomes even more significant,
+#with a home run frequently providing a solid source
+#of runs even when there are outs on the board,
+#but singles are less likely to result in runs
+#in such instances. 
+#2.) The worth of a successful stolen base is
+#determined by the game circumstances, the unique
+#setting, and the ramifications of a failed effort.
+#When employed wisely, it may be an effective
+#strategy, especially in low-scoring games or when
+#the team needs a run. 
+#3.) 
+matrix <- matrix(c(0.5, 0.9, 1.2, 0.2, 0.6, 0.9, 0.1, 0.4, 0.5), nrow = 3, byrow = TRUE)
+colnames(matrix) <- c("0 Outs", "1 Out", "2 Outs")
+rownames(matrix) <- c("Bases Empty", "Runner on 1st", "Runner on 2nd")
+
+# Define a function to calculate run value
+calculate_run_value <- function(event_description, base_out_state) {
+  # Get the run expectancy value from the matrix based on the base-out situation
+  run_expectancy <- matrix[base_out_state, event_description]
+  return(run_expectancy)
+}
+
+# Example usage:
+# To calculate the run value of a single with a runner on 2nd and 1 out, you can do:
+run_value <- calculate_run_value("1 Out", "Runner on 2nd")
+print(run_value)
+#
