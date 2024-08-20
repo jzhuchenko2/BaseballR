@@ -1,5 +1,4 @@
 # BaseballR
-Baseball Analyics: 
-https://github.com/beanumber/baseball_R/tree/master/solutions_to_exercises
+Baseball Analyics
 
 project 10/11/23
